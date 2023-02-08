@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz app </title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Welcome to Quiz Play</h1>
+        </div>
+
+        <div class="details">
+            <div class="nameContainer">
+                <div class="enterName">Enter name</div>
+
+                <input type="text" max="20" min="3" id="playerName" class="playerName">
+
+            </div>
+
+            <div class="category">
+                <div class="categoryName">Category </div>
+                <select id="mySelect" class="categorySelection">
+                    <option value="any">Any Category</option>            
+                    <option value="9">General Knowledge</option>
+                    <option value="17">Science &amp; Nature</option>
+                    <option value="18">Science: Computers</option>
+                    <option value="19">Science: Mathematics</option>
+                </select>
+
+            </div>
+        </div>
+
+
+
+        <div>
+
+            <button class="playButton" type="submit">START QUIZ</button>
+        </div>
+    </div>
+    <script>
+        localStorage.clear();
+        function  validate(){
+            let name = document.getElementById("playerName").value;
+            if(name == ""){
+                alert("Name is required");
+                return false;
+            }else{
+                return true;
+            }
+        }
+        const playButton = document.querySelector(".playButton");
+        playButton.addEventListener('click', (e) => {
+            if(validate()){
+               const categoryNumber = document.getElementById("mySelect").value;
+               const playerName = document.getElementById("playerName").value;
+               localStorage.setItem("category", categoryNumber);
+               localStorage.setItem("Name", playerName );
+                window.location = "home.html";
+            }
+
+        })
+    
+    </script>
+
+</body>
+
+
+</html>

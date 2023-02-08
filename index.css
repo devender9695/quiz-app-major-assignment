@@ -1,0 +1,89 @@
+body {
+    background-image: url('backgroundimg.svg');
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+  }
+
+  h1{
+    font-size:50px;
+  }
+
+  .enterName, .categoryName {
+
+      font-size: 20px;
+      font-weight: bold;
+     margin-bottom: 30px;
+     padding: 15px;
+      height: 20px;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: flex-start;
+      border-radius: 4px;
+  }
+
+  .nameContainer, .category{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .playerName, .categorySelection{
+    font-size: 15px;
+    font-weight: bold;
+   margin-bottom: 50px;
+   padding: 15px;
+   width:260px;
+    height: 20px;
+    border: none;
+    color: black;
+  }
+
+  .details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+  }
+
+  .categorySelection{
+    width: 320px;
+    height: 50px;
+  }
+
+  .playButton{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    height:50px;
+    width: 110px;
+    border-radius: 5px;
+}
+
+
+.playButton:hover{
+    background-color: rgb(96, 92, 92);
+    color: white;
+    padding: 10px;
+    height:50px;
+    width: 110px;
+    border-radius: 5px;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>score result</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <div class="wrapper">
+    <div class="resultContainer">
+        <div>
+            <h1> Hi <span id="playerName"></span></h1>
+             <h1 >Your score is : <span id="score"> </span>/ 10</h1>
+             <h2> correct answers: <span id="correctAnswers"> </span></h2>
+             <h2> wrong answers: <span id="wrongedAnswers"> </span></h2>
+             <h2> Unanswered: <span id="unanswered"> </span></h2>
+        </div>
+        <div class="button">
+            <button class="playAgain-button">PLAY AGAIN</button>
+        </div>
+    </div>
+</div>
+    
+    <script>
+    const score = document.getElementById("score");
+    const correctAnswerCount = document.getElementById("correctAnswers");
+    const wrongAnswersCount = document.getElementById("wrongedAnswers");
+    const unansweredCount = document.getElementById("unanswered");
+
+    score.innerHTML = localStorage.getItem("score");
+    correctAnswerCount.innerHTML = localStorage.getItem("score");
+    wrongAnswersCount.innerHTML = localStorage.getItem("wrong");
+
+    let correctAnswer = parseInt(localStorage.getItem("score"));
+    let wrongedAnswer = parseInt(localStorage.getItem("wrong"));
+    let unanswered = 10 - (correctAnswer + wrongedAnswer);
+    unansweredCount.innerHTML = unanswered;
+
+    const name = localStorage.getItem("Name");
+    const playerName = document.getElementById("playerName");
+    playerName.innerHTML = name;
+
+    const playAgainBtn = document.querySelector(".playAgain-button");
+    playAgainBtn.addEventListener('click', (e) => {
+        window.location = "index.html";
+        localStorage.clear();
+    })
+
+    
+    </script>
+</body>
+</html>

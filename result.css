@@ -1,0 +1,45 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.resultContainer{
+    background-image: url('backgroundimg.svg');
+    height: 70vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+
+.playAgain-button{
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    height:50px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+
+.playAgain-button:hover{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    height:50px;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: larger;
+    font-weight: bold;
+}
